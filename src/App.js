@@ -1,6 +1,7 @@
 import React from 'react';
 import Wrapper from './Wrapper';
 import Content from './Content'
+import DemoJSX from './DemoJSX'
 
 // Capitalized
 // Return a user Interface
@@ -8,6 +9,7 @@ import Content from './Content'
 export default function App (){
   return (
     <div>
+      <DemoJSX />
       {/* WRAPPER A: named as prop */}
       <Wrapper name="Wrapper A" children={()=>{ console.log('hi')}}>
         {()=>{ console.log('hi')}}

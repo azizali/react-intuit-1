@@ -1,27 +1,33 @@
 import React from 'react';
+import PropTypes from 'prop-types'
 
-export default function Header (props){
-  const value = props.getInfo();
+export default function Header ({ age, getInfo, name, options, employees }){
+  age = 15;
+  const value = getInfo();
   
   return (
     <div>   
-      Hello {props.name} <br />
-      Age: {props.age * 3} <br />
+      Hello {name} <br />
+      Age: {age * 3} <br />
       Valid: {(function(){ return 'abc'})()} <br />
       
       {/* // Invalid since its not an expression */}
       {/* Valid?: {function(){ return 'abc'}} <br /> */}
       
-      {(props.age > 21)? 'You are allowed access': 'You are underage'}<br />
+      {(age > 21)? 'You are allowed access': 'You are underage'}<br />
       
-      {!!props.employees && <>Employees: {props.employees}<br /></>}
+      {!!employees && <>Employees: {employees}<br /></>}
       
-      Office Count: {props.options.numberOfOffices}<br />
+      Office Count: {options.numberOfOffices}<br />
       
-      Employee Count: {props.options.numberOfEmployees}<br />
+      Employee Count: {options.numberOfEmployees}<br />
       
       getInfo: {value} <br />
       <hr />
     </div>
   )
+}
+
+Header.propTypes = {
+  name: PropTypes.string.isRequired,
 }

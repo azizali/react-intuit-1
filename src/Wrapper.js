@@ -1,11 +1,13 @@
 import React from 'react';
 import Header from './Header'
-import Content from './Content'
 import Footer from './Footer'
 
-export default function Wrapper (){
+export default function Wrapper ({ name, children }){
+  console.log(children)
+  // children();
   return (
     <div>
+      <h1>{name}</h1>
       <Header
         name="Intuit"
         age={12}
@@ -19,7 +21,7 @@ export default function Wrapper (){
           return 'Hello';
         }}
       />
-      <Content />
+      {/* {children} */}
       <Footer />
     </div>
   )

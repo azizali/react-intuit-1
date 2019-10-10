@@ -1,10 +1,10 @@
 import React from 'react';
-import Counter from './Counter'
+import Container from './CountTracker/Container'
 
 export default function App (){
   return (
     <div>
-      <Counter default={10} />
+      <Container name="Something" />
     </div>
   )
 }

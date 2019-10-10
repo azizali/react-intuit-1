@@ -27,7 +27,7 @@ export default class Container extends Component{
       }}>
         <small>Container</small>
         <button onClick={()=>{this.handleClick()}}>Add Count</button>
-        <CounterNew value={this.state.counter} />
+        {this.state.counter < 3 && <CounterNew value={this.state.counter} />}
         <Score
           score={this.state.counter}
           updateScore={this.handleClick}
@@ -35,4 +35,6 @@ export default class Container extends Component{
       </div>
     )
   }
+
+
 }

@@ -1,10 +1,8 @@
 import React from 'react';
-import Container from './CountTracker/Container'
+import Population from './Population/'
 
 export default function App (){
   return (
-    <div>
-      <Container name="Something" />
-    </div>
+    <Population countryName="" />
   )
 }

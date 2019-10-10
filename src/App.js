@@ -1,8 +1,13 @@
 import React from 'react';
-import Population from './Population/'
+import CounterHook from './Hooks/CounterHook'
+import Container from './CountTracker/Container'
 
 export default function App (){
   return (
-    <Population countryName="" />
+    <>
+      <Container />
+      <hr />
+      <CounterHook />
+    </>
   )
 }

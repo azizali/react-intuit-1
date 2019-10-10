@@ -15,7 +15,8 @@ export default function Wrapper (){
           numberOfEmployees: 2000
         }}
         getInfo={()=>{
-          return 'Hello'
+          // Save user API call
+          return 'Hello';
         }}
       />
       <Content />

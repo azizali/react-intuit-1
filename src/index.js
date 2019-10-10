@@ -8,17 +8,6 @@
 
 import React from 'react';
 import ReactDOM from 'react-dom';
-
-// Capitalized
-// Return a user Interface
-// One parent
-function App (){
-  return (
-    <div>
-      <div>First Div</div>
-      <div>Second Div</div>
-    </div>
-  )
-}
+import App from './App';
 
 ReactDOM.render(<App />, document.getElementById('root'));
